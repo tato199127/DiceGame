@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Lemonada:wght@600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+
+html{
+    background-color: aquamarine;
+    font-family: 'Lemonada', cursive;
+    font-size: 20px;
+    font-weight: 300;
+    height: 100vh;
+}
+
+/*************************
+General
+*************************/
+
+.container{
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 50px;
+}
+
+.player-0-panel{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: #d7f8fa;
+}
+
+.player-1-panel{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: #d7f8fa;
+}
+
+.center{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    height: 80%;
+}
+
+/***********************
+Buttons
+***********************/
+
+button{
+    width: 200px;
+    color: orange;
+    background: none;
+    border: none;
+    font-size: 100%;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 300;
+    transition: background-color 0.3s, color 0.3s ;
+}
+
+button:hover {font-weight: 600;}
+
+
+button:focus{
+    outline: none;
+}
+
+.center .btn-roll,
+.center .btn-hold,
+.center .final-score {
+    margin-bottom: 10px;
+}
+
+.center .final-score{
+    text-align: center;
+    border: none;
+}
+
+.center .final-score:focus {
+    background-color: white;
+    outline: none;
+    border-bottom: 2px solid orange;
+}
+
+.btn-new{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: 10px;
+}
+
+/** ICONS **/
+
+.small-icon {
+    color: red;
+    display: inline-block;
+    margin-right: 15px;
+    font-size: 32px;
+    line-height: 1;
+    vertical-align: text-top;
+    margin-top: -4px;
+    transition: margin 0.3s;
+}
+
+.dice{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: 40%;
+    height: 100px;
+    box-shadow: 0px 10px 20px rgb(0, green, rgb(136, 136, 168));
+}
+
+/******************
+PLAYERS
+******************/
+
+.player-name{
+    font-size: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 100;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.active {background-color: rgb(208, 228, 208);}
+.active .player-name {font-weight: 300;}
+
+.active .player-name::after{
+    content: "\2022";
+    font-size: 50px;
+    position: absolute;
+    color: rgb(127, 209, 209);
+    top: -5px;
+}
+
+.player-score{
+    text-align: center;
+    font-size: 400%;
+    font-weight: 100;
+    color: orange;
+    margin-bottom: 130px;
+}
+
+.player-current-box{
+    background-color: aqua;
+    color: white;
+    width: 40%;
+    margin: 0 auto;
+    padding: 12px;
+    text-align: center;
+}
+
+.player-current-label{
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-size: 12px;
+    color: #fff;
+}
+
+.player-current-score{
+    font-size: 150%;
+}
+
+.winner {background-color: #99ff00;}
+.winner .player-name {font-weight: bold; color: orange;}
